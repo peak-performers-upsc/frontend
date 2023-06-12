@@ -1,0 +1,61 @@
+.header_section {
+  // background-color: rgb(255, 255, 255);
+ 
+  display: flex;
+
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+
+
+.logo {
+  height: 5rem;
+}
+
+.main_nav_list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 3.2rem;
+  font-size: 1.6rem;
+}
+
+// .main-nav-link {
+//   text-decoration: none;
+//   &:focus,
+//   &:hover,
+//   &:visited,
+//   &:link,
+//   &:active {
+//     text-decoration: none;
+//   }
+// }
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #f5d800;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+a:hover,
+a:active {
+  text-shadow: 5px 5px 10px white;
+  color: rgb(244, 244, 244);
+  transition: all 0.3s;
+}
+
+// .sticky {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+
+// }

@@ -1,0 +1,50 @@
+.hero_section{
+  
+    // padding-left: 5rem;
+    // padding-right: 5rem;
+    max-width: 130rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-top: 8rem;
+
+}
+
+
+
+
+.hero_img {
+    display: flex;
+    justify-content: center;
+    
+    img{
+        object-fit: cover;
+        height: 50%;
+      
+    }
+ 
+}
+
+
+.hero_text{
+    padding-top: 5rem;
+    text-align: center;
+    
+    .p1{
+        font-size: 5rem;
+        color: #d6d6d6;
+    }
+
+    .p2{
+        font-size: 3rem;
+        margin-top: 2rem;
+        color: #727272;
+
+    }
+
+
+}
+
+
+
+
