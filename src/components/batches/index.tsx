@@ -33,7 +33,7 @@ const batches: IBatch[] = [
         duration: {
             total: "4 months",
             weekly: "4 days",
-            daily: "1hr"
+            daily: "1 hr"
         },
         image: fastTrackImage,
         details: [
@@ -44,16 +44,19 @@ const batches: IBatch[] = [
     {
         title: "Integrated General Studies Online Batch",
         subtitle: "Prelims plus Main Exam integrated",
-        prof: "Bhupender Bhardwaj",
+        prof: ["Bhupender Bhardwaj"],
         duration: {
-            total: "4 months",
-            weekly: "4days",
-            daily: "1hr"
+            total: "11 months",
+            weekly: "4 days",
+            daily: "1.5 hrs"
         },
         image: integratedImage,
         details: [
-            "Special Notes for 5 subjects would be couriered",
-            "Prelims Test Series (3)"
+            "Incorporates coverage of History, Geog, Polity, Economics, Sci-tech, Culture Environment",
+            "Along with Ethics and Essay",
+            "Coverage of Books By Amartya Sen, Abhijit Banerjee/Esther Duflo and Ramachandra Guha",
+            "Test series (2 rounds) and Newspaper coverage is included",
+            "CSAT and Interview Modules excluded"
         ]
     }
 ]
