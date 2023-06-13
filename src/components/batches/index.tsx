@@ -32,7 +32,7 @@ const batches: IBatch[] = [
         prof: "Bhupender Bhardwaj",
         duration: {
             total: "4 months",
-            weekly: "4days",
+            weekly: "4 days",
             daily: "1hr"
         },
         image: fastTrackImage,
@@ -76,7 +76,7 @@ export default function Batches({ className }: BatchesProps) {
             </Divider>
             <div className={styles.main}>
                 {batches.map((batch, i) => (
-                    <Batch key={i} batch={batch} reverse={i%2 === 1}/>
+                    <Batch key={i} batch={batch} reverse={true}/>
                 ))}
             </div>
         </div>

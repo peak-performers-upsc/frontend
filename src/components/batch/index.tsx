@@ -25,7 +25,7 @@ interface BatchProps {
     reverse?: boolean
 }
 
-export default function Batch({ batch, reverse }: BatchProps) {
+export default function Batch({ batch }: BatchProps) {
     return (
         <div 
             style={{ 
@@ -37,14 +37,14 @@ export default function Batch({ batch, reverse }: BatchProps) {
             <Card 
                 sx={{
                     minHeight: 350,
-                    width: "80%",
+                    width: "75%",
                     bgcolor: alpha("#1d1d1dfb", 1),
                     borderRadius: "2rem",
                     display: "flex",
                     padding: "0 8rem",
                     alignItems: "center",
-                    flexDirection: `row${reverse && "-reverse"}`,
-                    gap: "2rem"
+                    flexDirection: `row-reverse`,
+                    gap: "4rem"
                 }}
             >
                 <Box width="80%" minHeight="80%">
@@ -52,7 +52,7 @@ export default function Batch({ batch, reverse }: BatchProps) {
                         sx={{
                             display: "flex",
                             flexDirection: "column",
-                            gap: "1rem"
+                            gap: "1.5em"
                         }}
                     >
                         <div>
@@ -79,7 +79,13 @@ export default function Batch({ batch, reverse }: BatchProps) {
                             <Chip label={`${batch.duration.weekly} per week`} />
                             <Chip label={`${batch.duration.daily} per day`} />
                         </div>
-                        
+                        <div 
+                            style={{
+
+                            }}
+                        >
+                            
+                        </div>
                     </CardContent>
                 </Box>
                 <Box width="20%">
