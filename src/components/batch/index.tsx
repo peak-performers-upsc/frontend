@@ -1,4 +1,3 @@
-
 import {
     Card,
     CardMedia,
@@ -39,7 +38,7 @@ export default function Batch({ batch, reverse }: BatchProps) {
                 sx={{
                     minHeight: 350,
                     width: "80%",
-                    bgcolor: alpha(palette.bgColor, 0.8),
+                    bgcolor: alpha("#1d1d1dfb", 1),
                     borderRadius: "2rem",
                     display: "flex",
                     padding: "0 8rem",

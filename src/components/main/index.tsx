@@ -1,5 +1,6 @@
 import styles from "./styles.module.scss";
 import emblemYellowImage from "./../../assets/emblem-primary.png";
+import palette from "../../theme/palette";
 
 export default function Header() {
   return (
@@ -11,7 +12,7 @@ export default function Header() {
             CONTINUE THAT COUNTS
           </p>
           <p className={styles.p2}>
-            Ascend to new heights of excellence with<br></br>Peak Performers,
+            Ascend to new heights of excellence with<br></br><span style={{ color: "#d6d6d6" }}>Peak Performers</span>,
             the premier institute for IAS aspirants.
             <br /> Harness your potential and conquer the challenges on your
             path to becoming a distinguished civil servant.
