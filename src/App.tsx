@@ -1,15 +1,16 @@
-import Header from "./components/header/header"
-import Hero from "./components/hro_section/hero"
-import Cards from "./components/courses/course"
+import Batches from "./components/batches"
+import Header from "./components/header"
+import Hero from "./components/main"
 
 function App() {
 
   return (
     <>
-    <Header></Header>
-    <Hero></Hero>
-    <Cards></Cards>
-      
+      <Header />
+      <main>
+        <Hero />
+        <Batches />
+      </main>
     </>
   )
 }

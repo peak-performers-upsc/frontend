@@ -1,5 +1,5 @@
-import styles from "./hero.module.scss";
-import logo from "./../../assets/emblem1.svg";
+import styles from "./styles.module.scss";
+import emblemYellowImage from "./../../assets/emblem-primary.png";
 
 export default function Header() {
   return (
@@ -10,7 +10,6 @@ export default function Header() {
             SUCCESS IS NOT FINAL, FILURE IS NOT FATAL, IT IS THE COURAGE TO
             CONTINUE THAT COUNTS
           </p>
-
           <p className={styles.p2}>
             Ascend to new heights of excellence with<br></br>Peak Performers,
             the premier institute for IAS aspirants.
@@ -19,7 +18,7 @@ export default function Header() {
           </p>
         </div>
         <div className={styles.hero_img}>
-          <img src={logo}></img>
+          <img src={emblemYellowImage} />
         </div>
       </div>
     </>

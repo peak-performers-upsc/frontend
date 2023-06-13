@@ -1,4 +1,4 @@
-import styles from "./header.module.scss";
+import styles from "./styles.module.scss";
 import logo from "./../../assets/banner2.png";
 
 export default function Header() {
