@@ -1,7 +1,10 @@
 @import "../../theme/palette.scss";
 
 .batches_container {
-    background-image: radial-gradient(at top right, #434343 5%, #131313 25%, #000000 50%);
+    background-image: 
+        radial-gradient(at top right, #434343 5%, #131313 25%, #000000 50%),
+        radial-gradient(at bottom left, #434343 5%, #131313 25%, #000000 50%),
+    ;
     min-height: 100vh;
     padding-top: 3rem;
     padding: 0 3rem;
