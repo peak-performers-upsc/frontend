@@ -6,7 +6,7 @@ import {
     alpha,
     Box,
     Typography as MuiTypography,
-    Chip
+    Chip as MuiChip
 } from "@mui/material"
 import { IBatch } from "../batches"
 import palette from "../../theme/palette"
@@ -14,6 +14,11 @@ import styled from "@emotion/styled"
 
 const Typography = styled(MuiTypography)`
     color: #d6d3d3;
+`
+
+const Chip = styled(MuiChip)`
+    background-color: ${palette.primaryColor};
+    font-size: large;
 `
 
 interface BatchProps {
@@ -47,13 +52,24 @@ export default function Batch({ batch, reverse }: BatchProps) {
                     <CardContent
                         sx={{
                             display: "flex",
-                            flexDirection: "column"
+                            flexDirection: "column",
+                            gap: "1rem"
                         }}
                     >
-                        <Typography variant="h2">{batch.title}</Typography>
-                        {batch.subtitle && (
-                            <Typography variant="h3" sx={{ color: "#6e7272 !important"}}>{batch.subtitle}</Typography>
-                        )}
+                        <div>
+                            <Typography variant="h2">{batch.title}</Typography>
+                            {batch.subtitle && (
+                                <Typography 
+                                    variant="h3" 
+                                    sx={{ 
+                                        color: "#6e7272 !important",
+                                        fontSize: 22
+                                    }}
+                                >
+                                    {batch.subtitle}
+                                </Typography>
+                            )}
+                        </div>
                         <div 
                             style={{
                                 display: "flex",
@@ -61,7 +77,10 @@ export default function Batch({ batch, reverse }: BatchProps) {
                             }}
                         >
                             <Chip label={batch.duration.total} />
+                            <Chip label={`${batch.duration.weekly} per week`} />
+                            <Chip label={`${batch.duration.daily} per day`} />
                         </div>
+                        
                     </CardContent>
                 </Box>
                 <Box width="20%">

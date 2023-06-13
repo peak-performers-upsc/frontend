@@ -66,7 +66,9 @@ export default function Batches({ className }: BatchesProps) {
                     variant="h1"
                     sx={{
                         borderBottom: `1px solid ${alpha(palette.primaryColor, 0.7)}`,
-                        padding: "0.8rem 35vw"
+                        padding: "01rem 35vw",
+                        fontSize: 60,
+                        textTransform: "uppercase"
                     }}
                 >
                     Batches
