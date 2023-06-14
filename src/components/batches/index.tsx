@@ -58,6 +58,24 @@ const batches: IBatch[] = [
             "Test series (2 rounds) and Newspaper coverage is included",
             "CSAT and Interview Modules excluded"
         ]
+    },
+    {
+        title: "Integrated General Studies Online Batch",
+        subtitle: "Prelims plus Main Exam integrated",
+        prof: ["Bhupender Bhardwaj"],
+        duration: {
+            total: "11 months",
+            weekly: "4 days",
+            daily: "1.5 hrs"
+        },
+        image: integratedImage,
+        details: [
+            "Incorporates coverage of History, Geog, Polity, Economics, Sci-tech, Culture Environment",
+            "Along with Ethics and Essay",
+            "Coverage of Books By Amartya Sen, Abhijit Banerjee/Esther Duflo and Ramachandra Guha",
+            "Test series (2 rounds) and Newspaper coverage is included",
+            "CSAT and Interview Modules excluded"
+        ]
     }
 ]
 
@@ -79,7 +97,7 @@ export default function Batches({ className }: BatchesProps) {
             </Divider>
             <div className={styles.main}>
                 {batches.map((batch, i) => (
-                    <Batch key={i} batch={batch} reverse={true}/>
+                    <Batch key={i} batch={batch} reverse={true} negative={i%3===2} />
                 ))}
             </div>
         </div>

@@ -29,9 +29,10 @@ const Circle = styled(CircleIcon)`
 interface BatchProps {
     batch: IBatch
     reverse?: boolean
+    negative?: boolean
 }
 
-export default function Batch({ batch }: BatchProps) {
+export default function Batch({ batch, negative }: BatchProps) {
     const prof = (typeof batch.prof === "string"?([batch.prof]):batch.prof)
     return (
         <div 
@@ -45,13 +46,14 @@ export default function Batch({ batch }: BatchProps) {
                 sx={{
                     minHeight: 350,
                     width: "70%",
-                    bgcolor: alpha("#1d1d1dfb", 1),
+                    bgcolor: negative?alpha(palette.primaryColor, .75):"#1d1d1dfb",
                     borderRadius: "2rem",
                     display: "flex",
                     padding: "0 8rem",
                     alignItems: "center",
                     flexDirection: `row-reverse`,
-                    gap: "4rem"
+                    gap: "4rem",
+                    color: !negative?palette.primaryColor:"#1d1d1dfb"
                 }}
             >
                 <Box width="75%" minHeight="80%">
@@ -59,11 +61,19 @@ export default function Batch({ batch }: BatchProps) {
                         sx={{
                             display: "flex",
                             flexDirection: "column",
-                            gap: "1.5em"
+                            gap: "1.5em",
+                            color: !negative?palette.primaryColor:"#1d1d1dfb"
                         }}
                     >
                         <div>
-                            <Typography variant="h2">{batch.title}</Typography>
+                            <Typography 
+                                variant="h2"
+                                sx={{
+                                    ...(negative && { color: "#1d1d1d !important"})
+                                }}
+                            >
+                                {batch.title}
+                            </Typography>
                             <div style={{ display: "flex"}}>
                                 <Typography 
                                     variant="h2" 
@@ -73,7 +83,7 @@ export default function Batch({ batch }: BatchProps) {
                                     {prof.map((e, i) => (
                                         <span 
                                             style={{ 
-                                                color: alpha(palette.primaryColor, 0.85)
+                                                color: !negative?palette.primaryColor:"#333"
                                             }} 
                                             key={i}
                                         >
@@ -123,9 +133,6 @@ export default function Batch({ batch }: BatchProps) {
                                 </div>
                             ))}
                         </div>
-                        {/* <div>
-                            <Typography variant="h3" gutterBottom>By: {batch.prof}</Typography>
-                        </div> */}
                     </CardContent>
                 </Box>
                 <Box width="25%">

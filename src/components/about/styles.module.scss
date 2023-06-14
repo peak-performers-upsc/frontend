@@ -16,6 +16,19 @@
                 color: $primary-color;
             }
         }
-    }
 
+        &>.main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5rem;
+            padding: 4rem 0;
+        }
+
+        &.more {
+            display: flex;
+            align-items: flex-end;
+        }
+    }
 }
