@@ -1,4 +1,4 @@
-.hero_section{
+.hero_section {
     margin: 0 auto;
     padding-top: 8rem;
     display: flex;
@@ -6,7 +6,7 @@
     align-items: center;
     padding: 0 15rem;
     gap: 10rem;
-    background-image: radial-gradient(circle at 100% 100%, #434343 5%, #131313 25%, #000000 50%);
+    background-image: radial-gradient(circle at 100% 100%, #434343 5%, #131313 20%, #000000 30%);
     // height: 100vh;
 
     &>.hero_img {

@@ -1,6 +1,7 @@
+import About from "./components/about"
 import Batches from "./components/batches"
 import Header from "./components/header"
-import Hero from "./components/main"
+import Main from "./components/main"
 
 function App() {
 
@@ -8,7 +9,8 @@ function App() {
     <>
       <Header />
       <main>
-        <Hero />
+        <Main />
+        <About />
         <Batches />
       </main>
     </>

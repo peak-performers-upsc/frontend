@@ -1,0 +1,21 @@
+@import "../../theme/palette.scss";
+
+.wrapper {
+    background-image: radial-gradient(circle at 0% 100%, #434343 5%, #131313 20%, #000000 30%);
+    
+    &>.about_container {
+        background-image: radial-gradient(circle at 100% 0%, #434343 5%, #131313 20%, transparent 30%);
+        min-height: 100vh;
+        padding-top: 3rem;
+        padding: 0 3rem;
+    
+        &>.title {
+            padding-bottom: 2rem;
+            & .subtitle {
+                text-transform: none;
+                color: $primary-color;
+            }
+        }
+    }
+
+}
