@@ -7,7 +7,7 @@ import styles from "./styles.module.scss"
 import palette from "../../theme/palette"
 import fastTrackImage from "../../assets/fast-track.svg"
 import integratedImage from "../../assets/integrated.svg"
-import Batch from "../batch"
+import Batch from "../course"
 
 interface BatchesProps {
     className?: string
@@ -81,24 +81,32 @@ const batches: IBatch[] = [
 
 export default function Batches({ className }: BatchesProps) {
     return (
-        <div className={`${className?className:""} ${styles.batches_container}`}>
-            <Divider flexItem className={styles.title}>
-                <Typography 
-                    variant="h1"
-                    sx={{
-                        borderBottom: `1px solid ${alpha(palette.primaryColor, 0.7)}`,
-                        padding: "01rem 35vw",
-                        fontSize: 60,
-                        textTransform: "uppercase"
-                    }}
-                >
-                    Batches
-                </Typography>
-            </Divider>
-            <div className={styles.main}>
-                {batches.map((batch, i) => (
-                    <Batch key={i} batch={batch} reverse={true} negative={i%3===2} />
-                ))}
+        <div className={styles.wrapper} id="courses">
+            <div className={`${className?className:""} ${styles.batches_container}`} >
+                <div className={styles.title_container}>
+                    <div 
+                        className={styles.title}
+                        style={{
+                            borderBottom: `1px solid ${alpha(palette.primaryColor, 0.7)}`,
+                        }}
+                    >
+                        <Typography 
+                            variant="h1"
+                            sx={{
+                                fontSize: 55,
+                                textTransform: "uppercase",
+                                textAlign: "center"
+                            }}
+                        >
+                            Courses
+                        </Typography>
+                    </div>
+                </div>
+                <div className={styles.main}>
+                    {batches.map((batch, i) => (
+                        <Batch key={i} batch={batch} reverse={true} negative={i%3===2} />
+                    ))}
+                </div>
             </div>
         </div>
     )

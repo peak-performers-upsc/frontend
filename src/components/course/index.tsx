@@ -7,18 +7,23 @@ import {
     Typography as MuiTypography,
     Chip as MuiChip
 } from "@mui/material"
-import { IBatch } from "../batches"
+import { IBatch } from "../courses"
 import palette from "../../theme/palette"
 import styled from "@emotion/styled"
 import { Circle as CircleIcon } from '@mui/icons-material';
 
 const Typography = styled(MuiTypography)`
-    color: #d6d3d3;
+    color: #cccccc;
 `
 
 const Chip = styled(MuiChip)`
     background-color: ${alpha(palette.primaryColor, 0.85)};
     font-size: large;
+
+    .MuiChip-custom {
+        background-color: #262626;
+        color: #cccccc;
+    }
 `
 
 const Circle = styled(CircleIcon)`
@@ -69,7 +74,8 @@ export default function Batch({ batch, negative }: BatchProps) {
                             <Typography 
                                 variant="h2"
                                 sx={{
-                                    ...(negative && { color: "#1d1d1d !important"})
+                                    ...(negative && { color: "#1d1d1d !important"}),
+                                    fontWeight: 500
                                 }}
                             >
                                 {batch.title}
@@ -83,13 +89,13 @@ export default function Batch({ batch, negative }: BatchProps) {
                                     {prof.map((e, i) => (
                                         <span 
                                             style={{ 
-                                                color: !negative?palette.primaryColor:"#333"
+                                                color: !negative?palette.primaryColor:"#fff"
                                             }} 
                                             key={i}
                                         >
                                             {e}
                                             {i<prof.length-1 && (
-                                                <span style={{ color: "#d6d6d6"}}>{", "}</span>
+                                                <span style={{ color: "#1d1d1d"}}>{", "}</span>
                                             )}
                                         </span>
                                     ))}
@@ -99,8 +105,9 @@ export default function Batch({ batch, negative }: BatchProps) {
                                 <Typography 
                                     variant="h3" 
                                     sx={{ 
-                                        color: "#6e7272 !important",
-                                        fontSize: 22
+                                        color: `${negative?"#1d1d1dfb":"#cccccc"} !important`,
+                                        fontSize: 22,
+                                        fontWeight: 500
                                     }}
                                 >
                                     {batch.subtitle}
@@ -113,9 +120,28 @@ export default function Batch({ batch, negative }: BatchProps) {
                                 gap: 8
                             }}
                         >
-                            <Chip label={batch.duration.total} />
-                            <Chip label={`${batch.duration.weekly} per week`} />
-                            <Chip label={`${batch.duration.daily} per day`} />
+                            <Chip 
+                                label={batch.duration.total} 
+                                sx={{...(negative && { 
+                                    backgroundColor: "#262626 !important",
+                                    color: "#cccccc !important"
+                                    }
+                                )}} 
+                            />
+                            <Chip 
+                                label={`${batch.duration.weekly} per week`} 
+                                sx={{...(negative && { 
+                                    backgroundColor: "#262626 !important", 
+                                    color: "#cccccc !important"}
+                                )}} 
+                            />
+                            <Chip 
+                                label={`${batch.duration.daily} per day`} 
+                                sx={{...(negative && { 
+                                    backgroundColor: "#262626 !important", 
+                                    color: "#cccccc !important"}
+                                )}} 
+                            />
                         </div>
                         <div 
                             style={{
@@ -128,8 +154,19 @@ export default function Batch({ batch, negative }: BatchProps) {
                         >
                             {batch.details.map((detail, i) => (
                                 <div style={{ display: "flex", alignItems: "center", gap: ".8rem" }}>
-                                    <Circle />
-                                    <Typography variant="h4" key={i}>{detail}</Typography>
+                                    <Circle sx={{
+                                        ...(negative && { color: "#262626 !important"}),
+                                    }}/>
+                                    <Typography 
+                                        variant="h4" 
+                                        key={i}
+                                        sx={{
+                                            ...(negative && { color: "#262626 !important"}),
+                                            fontWeight: 430
+                                        }}
+                                    >
+                                        {detail}
+                                    </Typography>
                                 </div>
                             ))}
                         </div>

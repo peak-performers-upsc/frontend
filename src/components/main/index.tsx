@@ -1,6 +1,5 @@
 import styles from "./styles.module.scss";
 import emblemYellowImage from "./../../assets/emblem-primary.png";
-import palette from "../../theme/palette";
 
 export default function Header() {
   return (
@@ -8,7 +7,7 @@ export default function Header() {
       <div className={styles.hero_section}>
         <div className={styles.hero_text}>
           <p className={styles.p1}>
-            SUCCESS IS NOT FINAL, FILURE IS NOT FATAL, IT IS THE COURAGE TO
+            SUCCESS IS NOT FINAL, FAILURE IS NOT FATAL, IT IS THE COURAGE TO
             CONTINUE THAT COUNTS
           </p>
           <p className={styles.p2}>

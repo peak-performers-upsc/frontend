@@ -1,19 +1,27 @@
 @import "../../theme/palette.scss";
 
 .wrapper {
-    background-image: radial-gradient(circle at 0% 100%, #434343 5%, #131313 20%, #000000 30%);
+    background-image: radial-gradient(circle at 0% 100%, #434343 10rem, #131313 30rem, #000000 40rem);
     
     &>.about_container {
-        background-image: radial-gradient(circle at 100% 0%, #434343 5%, #131313 20%, transparent 30%);
+        background-image: radial-gradient(circle at 100% 0%, #434343 10rem, #131313 30rem, transparent 40rem);
         min-height: 100vh;
         padding-top: 3rem;
         padding: 0 3rem;
+        
+        &>.title_container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
     
-        &>.title {
-            padding-bottom: 2rem;
-            & .subtitle {
-                text-transform: none;
-                color: $primary-color;
+            &>.title {
+                padding-bottom: 2rem;
+                width: 80%;
+
+                & .subtitle {
+                    text-transform: none;
+                    color: $primary-color;
+                }
             }
         }
 
@@ -23,12 +31,12 @@
             justify-content: center;
             align-items: center;
             gap: 5rem;
-            padding: 4rem 0;
+            padding: 4rem 0
         }
 
-        &.more {
+        &>.more {
             display: flex;
-            align-items: flex-end;
+            justify-content: center;
         }
     }
 }

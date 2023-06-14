@@ -1,0 +1,55 @@
+@import "../../theme/palette.scss";
+
+.footer_container {
+    border-top: 1px solid rgba(245,216,0,0.4);
+    min-height: 15vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+
+    &>.main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 10%;
+        width: 75%;
+        padding: 3rem 0;
+        
+        &>.socials {
+            display: flex;
+            gap: 2rem;
+            color: #cccccc !important;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            &>.media {
+                display: flex;
+                gap: 4rem;
+                justify-content: space-evenly;
+            }
+        }
+
+        &>.contact, &>.links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            min-width: 25%;
+            &>.content {
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+
+                & div:hover {
+                    cursor: pointer;
+                }
+            }
+            &>.title {
+                width: 100%;
+                text-align: center;
+                // padding-top: 1rem;
+            }
+        }
+    }
+}

@@ -7,8 +7,10 @@ import {
     Card,
     Box,
     CardContent,
-    CardMedia
+    CardMedia,
+    Button
 } from "@mui/material";
+import { ArrowRightAlt } from '@mui/icons-material';
 import flexibleImage from "../../assets/flexible.svg";
 import learningImage from "../../assets/learning.svg";
 import personalisationImage from "../../assets/personalisation.svg";
@@ -45,21 +47,27 @@ const aboutTiles: IAbout[] = [
 
 export default function About() {
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} id="about">
             <div className={styles.about_container}>
-                <Divider flexItem className={styles.title}>
-                    <Typography 
-                        variant="h1"
-                        sx={{
+                <div className={styles.title_container}>
+                    <div 
+                        className={styles.title}
+                        style={{
                             borderBottom: `1px solid ${alpha(palette.primaryColor, 0.7)}`,
-                            padding: "01rem 25vw",
-                            fontSize: 60,
-                            textTransform: "uppercase"
                         }}
                     >
-                        Why??{" "}<span className={styles.subtitle}>Peak Performers</span>
-                    </Typography>
-                </Divider>
+                        <Typography 
+                            variant="h1"
+                            sx={{
+                                fontSize: 55,
+                                // textTransform: "uppercase",
+                                textAlign: "center"
+                            }}
+                        >
+                            Why??{" "}<span className={styles.subtitle}>Peak Performers</span>
+                        </Typography>
+                    </div>
+                </div>
                 <div className={styles.main}>
                     {aboutTiles.map(({ title, content, image }, i) => (
                         <div
@@ -134,9 +142,32 @@ export default function About() {
                         </div>
                     ))}
                 </div>
-                <div className={styles.more}>
-                    
-                </div>
+                {/* <div className={styles.more}>
+                    <div
+                        style={{
+                            width: "70%",
+                            display: "flex",
+                            justifyContent: "flex-end",
+                            padding: "0 8rem"
+                        }}
+                    >
+                        <Button 
+                            type="text" 
+                            href="/faq" 
+                            sx={{
+                                color: palette.primaryColor,
+                                borderRadius: "4rem",
+                                "&:hover": {
+                                    bgcolor: alpha(palette.primaryColor, .05)
+                                },
+                                padding: "0.5rem 1rem"
+                            }}
+                        >
+                            <Typography variant="h2">Know More</Typography>
+                            <ArrowRightAlt sx={{ fontSize: 45 }} />
+                        </Button>
+                    </div>
+                </div> */}
             </div>
         </div>
     )
