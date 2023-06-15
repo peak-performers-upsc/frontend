@@ -1,20 +1,17 @@
-import palette from "../../theme/palette";
-import styles from "./styles.module.scss";
 import {
-    Divider,
-    Typography,
-    alpha,
-    Card,
     Box,
+    Card,
     CardContent,
     CardMedia,
-    Button
+    Typography,
+    alpha
 } from "@mui/material";
-import { ArrowRightAlt } from '@mui/icons-material';
 import flexibleImage from "../../assets/flexible.svg";
 import learningImage from "../../assets/learning.svg";
 import personalisationImage from "../../assets/personalisation.svg";
 import preparationImage from "../../assets/preparation.svg";
+import palette from "../../theme/palette";
+import styles from "./styles.module.scss";
 
 interface IAbout {
     title: string

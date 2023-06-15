@@ -1,13 +1,12 @@
 import {
-    Divider,
     Typography,
     alpha
 } from "@mui/material"
-import styles from "./styles.module.scss"
-import palette from "../../theme/palette"
 import fastTrackImage from "../../assets/fast-track.svg"
 import integratedImage from "../../assets/integrated.svg"
+import palette from "../../theme/palette"
 import Batch from "../course"
+import styles from "./styles.module.scss"
 
 interface BatchesProps {
     className?: string
