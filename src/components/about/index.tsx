@@ -61,7 +61,7 @@ export default function About() {
                                 textAlign: "center"
                             }}
                         >
-                            Why??{" "}<span className={styles.subtitle}>Peak Performers</span>
+                           Unveiling the Essence of <span className={styles.subtitle}>Peak Performers </span>
                         </Typography>
                     </div>
                 </div>
@@ -84,7 +84,7 @@ export default function About() {
                                     display: "flex",
                                     padding: "0 8rem",
                                     alignItems: "center",
-                                    gap: "4rem",
+                                    gap: "8rem",
                                     flexDirection: `row${i%2===1?"-reverse":""}`,
                                     border: "none",
                                     justifyContent: "space-between"
@@ -97,7 +97,7 @@ export default function About() {
                                             flexDirection: "column",
                                             alignItems: "flex-start",
                                             gap: "1rem",
-                                            textAlign: i%2===1?"right":"left",
+                                            textAlign: "left",
                                             paddingTop: "2rem",
                                             justifyContent: "space-between"
                                         }}
@@ -115,8 +115,10 @@ export default function About() {
                                             fontSize={20}
                                             sx={{ 
                                                 color: "#d6d6d6", 
+                                                textAlign:"left",
+
                                                 width: "100%",
-                                                ...(i%2===1?({paddingLeft: "3rem"}):({paddingRight: "3rem"})) 
+                                               
                                             }}
                                             component="div"
                                         >
