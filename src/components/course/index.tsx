@@ -80,7 +80,7 @@ export default function Batch({ batch, negative }: BatchProps) {
                             >
                                 {batch.title}
                             </Typography>
-                            <div style={{ display: "flex"}}>
+                            {/* <div style={{ display: "flex"}}>
                                 <Typography 
                                     variant="h2" 
                                     fontSize={25}
@@ -100,7 +100,7 @@ export default function Batch({ batch, negative }: BatchProps) {
                                         </span>
                                     ))}
                                 </Typography>
-                            </div>
+                            </div> */}
                             {batch.subtitle && (
                                 <Typography 
                                     variant="h3" 

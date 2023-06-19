@@ -32,7 +32,7 @@ const socialMediaLinks = [
         name: "Facebook"
     },
     {
-        link: "https://www.instagram.com/peakperformers_upsctutorials/?hl=en",
+        link: "https://www.instagram.com/peakperformers.upsctutorials/",
         component: <Instagram sx={iconStyle} />,
         name: "Instagram"
     },
@@ -45,9 +45,14 @@ const socialMediaLinks = [
 
 const contactUsLinks = [
     {
+        link: "tel:+919892379238",
+        component: <Call sx={iconStyle} />,
+        name: "Primary"
+    },
+    {
         link: "tel:+919702409575",
         component: <Call sx={iconStyle} />,
-        name: "Phone"
+        name: "Secondary"
     },
     {
         link: "mailto:bhupihugedoors@yahoo.co.in",

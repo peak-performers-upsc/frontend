@@ -4,6 +4,7 @@ import {
 } from "@mui/material"
 import fastTrackImage from "../../assets/fast-track.svg"
 import integratedImage from "../../assets/integrated.svg"
+import sociologyImage from "../../assets/sociology.svg"
 import palette from "../../theme/palette"
 import Batch from "../course"
 import styles from "./styles.module.scss"
@@ -36,13 +37,15 @@ const batches: IBatch[] = [
         },
         image: fastTrackImage,
         details: [
+            "This is one of the most popular batches opted by the aspirants",
             "Special Notes for 5 subjects would be couriered",
             "Prelims Test Series (3)"
-        ]
+        ],
+        subtitle: "Online Module"
     },
     {
-        title: "Integrated General Studies Online Batch",
-        subtitle: "Prelims plus Main Exam integrated",
+        title: "Prelims plus Main Exam Integrated General Studies Batch",
+        subtitle: "Online Module",
         prof: ["Bhupender Bhardwaj"],
         duration: {
             total: "11 months",
@@ -59,21 +62,20 @@ const batches: IBatch[] = [
         ]
     },
     {
-        title: "Integrated General Studies Online Batch",
-        subtitle: "Prelims plus Main Exam integrated",
-        prof: ["Bhupender Bhardwaj"],
+        title: "Sociology Optional Batch",
+        prof: "Bhupender Bhardwaj",
         duration: {
-            total: "11 months",
-            weekly: "4 days",
-            daily: "1.5 hrs"
+            total: "5 months",
+            weekly: "2 days",
+            daily: "2 hrs"
         },
-        image: integratedImage,
+        image: sociologyImage,
+        subtitle: "Online Module",
         details: [
-            "Incorporates coverage of History, Geog, Polity, Economics, Sci-tech, Culture Environment",
-            "Along with Ethics and Essay",
-            "Coverage of Books By Amartya Sen, Abhijit Banerjee/Esther Duflo and Ramachandra Guha",
-            "Test series (2 rounds) and Newspaper coverage is included",
-            "CSAT and Interview Modules excluded"
+            "P1 and P2 coverage",
+            "Limited Material",
+            "Ritzer, Haralombus and Subberwal being the primary tests",
+            "2 rounds of 2 tests"
         ]
     }
 ]
@@ -103,7 +105,7 @@ export default function Batches({ className }: BatchesProps) {
                 </div>
                 <div className={styles.main}>
                     {batches.map((batch, i) => (
-                        <Batch key={i} batch={batch} reverse={true} negative={i%3===2} />
+                        <Batch key={i} batch={batch} reverse={true} negative={i%2==0} />
                     ))}
                 </div>
             </div>

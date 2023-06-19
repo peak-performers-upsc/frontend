@@ -37,7 +37,7 @@ const aboutTiles: IAbout[] = [
     },
     {
         title: "Unbeatable IAS Preparation Experience",
-        content: "Peak Performers IAS Institute offers an unbeatable IAS preparation experience, with a proven track record of success. Students can trust in top-notch support, resources, and expertise for their journey.",
+        content: "Peak Performers IAS Institute offers an unbeatable UPSC preparation experience, with a proven track record of success. Students can trust in top-notch support, resources, and expertise for their journey.",
         image: preparationImage
     }
 ]
