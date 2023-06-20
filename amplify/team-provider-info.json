@@ -1,15 +1,15 @@
 {
-  "master": {
+  "main": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-peakperformers-master-200644-authRole",
-      "UnauthRoleArn": "arn:aws:iam::008203415899:role/amplify-peakperformers-master-200644-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::008203415899:role/amplify-peakperformers-master-200644-authRole",
+      "AuthRoleName": "amplify-peakperformers-main-203421-authRole",
+      "UnauthRoleArn": "arn:aws:iam::008203415899:role/amplify-peakperformers-main-203421-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::008203415899:role/amplify-peakperformers-main-203421-authRole",
       "Region": "ap-south-1",
-      "DeploymentBucketName": "amplify-peakperformers-master-200644-deployment",
-      "UnauthRoleName": "amplify-peakperformers-master-200644-unauthRole",
-      "StackName": "amplify-peakperformers-master-200644",
-      "StackId": "arn:aws:cloudformation:ap-south-1:008203415899:stack/amplify-peakperformers-master-200644/ec209ff0-0f77-11ee-9d52-0aff96973454",
-      "AmplifyAppId": "d1qkcgpbe3n0xe"
+      "DeploymentBucketName": "amplify-peakperformers-main-203421-deployment",
+      "UnauthRoleName": "amplify-peakperformers-main-203421-unauthRole",
+      "StackName": "amplify-peakperformers-main-203421",
+      "StackId": "arn:aws:cloudformation:ap-south-1:008203415899:stack/amplify-peakperformers-main-203421/bda3b280-0f7b-11ee-9108-0ad9338ef582",
+      "AmplifyAppId": "dqikz4opxyevb"
     }
   }
 }
