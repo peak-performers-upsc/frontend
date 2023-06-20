@@ -10,8 +10,8 @@ export default function Header() {
             SUCCESS IS NOT FINAL, FAILURE IS NOT FATAL, IT IS THE COURAGE TO
             CONTINUE THAT COUNTS
           </p> */}
-          <p className={styles.p1}>
-            Become a UPSC CSE Topper guided by the UPSC Achievers themselves!
+          <p className={styles.p1} style={{ textTransform: "uppercase" }}>
+            Become a UPSC CSE Topper guided by the UPSC Achievers themselves!{"   "}
           </p>
           {/* <p className={styles.p2}>
             Ascend to new heights of excellence with<br></br><span style={{ color: "#d6d6d6" }}>Peak Performers</span>,

@@ -38,7 +38,7 @@ interface BatchProps {
 }
 
 export default function Batch({ batch, negative }: BatchProps) {
-    const prof = (typeof batch.prof === "string"?([batch.prof]):batch.prof)
+    // const prof = (typeof batch.prof === "string"?([batch.prof]):batch.prof)
     return (
         <div 
             style={{ 
