@@ -10,6 +10,14 @@
       "StackName": "amplify-peakperformers-main-203421",
       "StackId": "arn:aws:cloudformation:ap-south-1:008203415899:stack/amplify-peakperformers-main-203421/bda3b280-0f7b-11ee-9108-0ad9338ef582",
       "AmplifyAppId": "dqikz4opxyevb"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "dqikz4opxyevb",
+          "type": "cicd"
+        }
+      }
     }
   }
 }
