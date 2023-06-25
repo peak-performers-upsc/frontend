@@ -1,6 +1,7 @@
 import About from "../components/about"
 import Batches from "../components/courses"
 import Main from "../components/main"
+import Affairs from "../components/affairs"
 
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
         <>
             <main>
                 <Main />
+                <Affairs />
                 <About />
                 <Batches />
             </main>

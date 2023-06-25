@@ -1,10 +1,10 @@
 @import "../../theme/palette.scss";
 
 .wrapper {
-    background-image: radial-gradient(circle at 0% 0%, #434343 10rem, #131313 30rem, #000000 40rem);
+    background-image: radial-gradient(circle at 0% 100%, #434343 10rem, #131313 30rem, #000000 40rem);
     
-    &>.about_container {
-        background-image: radial-gradient(circle at 100% 100%, #434343 10rem, #131313 30rem, transparent 40rem);
+    &>.affairs_container {
+        background-image: radial-gradient(circle at 100% 0%, #434343 10rem, #131313 30rem, transparent 40rem);
         min-height: 100vh;
         padding-top: 3rem;
         padding: 0 3rem;
@@ -30,13 +30,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 5rem;
-            padding: 4rem 0
-        }
-
-        &>.more {
-            display: flex;
-            justify-content: center;
+            gap: 4rem;
+            padding: 6rem 20rem;
         }
     }
 }

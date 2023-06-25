@@ -95,7 +95,6 @@ export default function Batches({ className }: BatchesProps) {
                             variant="h1"
                             sx={{
                                 fontSize: 55,
-                                textTransform: "uppercase",
                                 textAlign: "center"
                             }}
                         >
@@ -105,7 +104,7 @@ export default function Batches({ className }: BatchesProps) {
                 </div>
                 <div className={styles.main}>
                     {batches.map((batch, i) => (
-                        <Batch key={i} batch={batch} reverse={true} negative={i%2==0} />
+                        <Batch key={i} batch={batch} reverse={true} negative={i%2==1} />
                     ))}
                 </div>
             </div>
