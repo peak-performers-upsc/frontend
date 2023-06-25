@@ -70,6 +70,7 @@ export default function Affairs() {
                                 sx={{
                                     color: "#cccccc",
                                     bgcolor: "#131313",
+                                    minWidth: "70%"
                                 }}
                             >
                                 <AccordionSummary
