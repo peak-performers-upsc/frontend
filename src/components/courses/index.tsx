@@ -94,8 +94,12 @@ export default function Batches({ className }: BatchesProps) {
                         <Typography 
                             variant="h1"
                             sx={{
-                                fontSize: 55,
-                                textAlign: "center"
+                                fontSize: "55px !important",
+                                // textTransform: "uppercase",
+                                textAlign: "center",
+                                "@media screen and (max-width: 750px)": {
+                                    fontSize: "40px !important"
+                                }
                             }}
                         >
                             Courses

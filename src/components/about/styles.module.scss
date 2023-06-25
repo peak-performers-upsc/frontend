@@ -38,5 +38,36 @@
             display: flex;
             justify-content: center;
         }
+
+        
+        @media screen and (max-width: 1350px) {
+            &>.main {
+                padding: 4rem 15rem;
+            }
+        }
+
+        @media screen and (max-width: 1150px) {
+            &>.main {
+                padding: 4rem 10rem;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            &>.main {
+                padding: 4rem 8rem;
+            }
+        }
+
+        @media screen and (max-width: 850px) {
+            &>.main {
+                padding: 4rem 7rem;
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+            &>.main {
+                padding: 2rem 2rem;
+            }
+        }
     }
 }

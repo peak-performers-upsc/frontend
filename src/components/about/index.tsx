@@ -56,9 +56,12 @@ export default function About() {
                         <Typography 
                             variant="h1"
                             sx={{
-                                fontSize: 55,
+                                fontSize: "55px !important",
                                 // textTransform: "uppercase",
-                                textAlign: "center"
+                                textAlign: "center",
+                                "@media screen and (max-width: 750px)": {
+                                    fontSize: "40px !important"
+                                }
                             }}
                         >
                            Unveiling the Essence of <span className={styles.subtitle}>Peak Performers </span>
@@ -87,10 +90,34 @@ export default function About() {
                                     gap: "8rem",
                                     flexDirection: `row${i%2===1?"-reverse":""}`,
                                     border: "none",
-                                    justifyContent: "space-between"
+                                    justifyContent: "space-between",
+                                    "@media screen and (max-width: 1350px)": {
+                                        width: "90%",
+                                        padding: "0 7rem"
+                                    },
+                                    "@media screen and (max-width: 1150px)": {
+                                        width: "100%"
+                                    },
+                                    "@media screen and (max-width: 1000px)": {
+                                        gap: "4rem"
+                                    },
+                                    "@media screen and (max-width: 750px)": {
+                                        gap: "2rem",
+                                        padding: "0 4rem"
+                                    },
+                                    "@media screen and (max-width: 550px)": {
+                                        gap: "2rem"
+                                    },
                                 }}
                             >
-                                <Box width="80%">
+                                <Box 
+                                    sx={{
+                                        "@media screen and (max-width: 750px)": {
+                                            width: "100%"
+                                        },
+                                        width: "80%"
+                                    }}
+                                >
                                     <CardContent
                                         sx={{
                                             display: "flex",
@@ -104,21 +131,40 @@ export default function About() {
                                     >
                                         <Typography
                                             variant="h1"
-                                            fontSize={40}
-                                            sx={{ color: palette.primaryColor, width: "100%" }}
+                                            sx={{ 
+                                                fontSize: 40,
+                                                color: palette.primaryColor, 
+                                                width: "100%",
+                                                "@media screen and (max-width: 1150px)": {
+                                                    fontSize: 30
+                                                },
+                                                "@media screen and (max-width: 1000px)": {
+                                                    fontSize: 25
+                                                },
+                                                "@media screen and (max-width: 475px)": {
+                                                    fontSize: 20
+                                                }
+                                            }}
                                             component="div"
                                         >
                                             {title}
                                         </Typography>
                                         <Typography
                                             variant="h1"
-                                            fontSize={20}
                                             sx={{ 
+                                                fontSize: 20,
                                                 color: "#d6d6d6", 
                                                 textAlign:"left",
-
                                                 width: "100%",
-                                               
+                                                "@media screen and (max-width: 1000px)": {
+                                                    fontSize: 18
+                                                },
+                                                "@media screen and (max-width: 750px)": {
+                                                    fontWeight: 450
+                                                },
+                                                "@media screen and (max-width: 475px)": {
+                                                    fontSize: 15
+                                                }
                                             }}
                                             component="div"
                                         >
@@ -126,14 +172,24 @@ export default function About() {
                                         </Typography>
                                     </CardContent>
                                 </Box>
-                                <Box width="30%">
+                                <Box 
+                                    width="30%" 
+                                    sx={{
+                                        "@media screen and (max-width: 750px)": {
+                                            display: "none"
+                                        }
+                                    }}  
+                                >
                                     <CardMedia 
                                         component="img"
                                         image={image}
                                         alt={title}
-                                        width={"20%"}
                                         sx={{
-                                            paddingTop: "2rem"
+                                            // width: "20%",
+                                            paddingTop: "2rem",
+                                            "@media screen and (max-width: 1350px)": {
+                                                width: "100% !important"
+                                            }
                                         }}
                                     />
                                 </Box>
@@ -141,32 +197,6 @@ export default function About() {
                         </div>
                     ))}
                 </div>
-                {/* <div className={styles.more}>
-                    <div
-                        style={{
-                            width: "70%",
-                            display: "flex",
-                            justifyContent: "flex-end",
-                            padding: "0 8rem"
-                        }}
-                    >
-                        <Button 
-                            type="text" 
-                            href="/faq" 
-                            sx={{
-                                color: palette.primaryColor,
-                                borderRadius: "4rem",
-                                "&:hover": {
-                                    bgcolor: alpha(palette.primaryColor, .05)
-                                },
-                                padding: "0.5rem 1rem"
-                            }}
-                        >
-                            <Typography variant="h2">Know More</Typography>
-                            <ArrowRightAlt sx={{ fontSize: 45 }} />
-                        </Button>
-                    </div>
-                </div> */}
             </div>
         </div>
     )

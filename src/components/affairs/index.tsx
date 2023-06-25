@@ -49,7 +49,10 @@ export default function Affairs() {
                             sx={{
                                 fontSize: "55px !important",
                                 // textTransform: "uppercase",
-                                textAlign: "center"
+                                textAlign: "center",
+                                "@media screen and (max-width: 750px)": {
+                                    fontSize: "40px !important"
+                                }
                             }}
                         >
                             Current Affairs
@@ -70,19 +73,32 @@ export default function Affairs() {
                                 sx={{
                                     color: "#cccccc",
                                     bgcolor: "#131313",
-                                    minWidth: "90%"
+                                    minWidth: "90%",
+                                    "@media screen and (max-width: 1150px)": {
+                                        minWidth: "95%"
+                                    },
+                                    "@media screen and (max-width: 850px)": {
+                                        minWidth: "none",
+                                    }
                                 }}
                             >
                                 <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon sx={{ color: "white"}}/>}
+                                    expandIcon={<ExpandMoreIcon sx={{ color: "white"}} fontSize="large"/>}
                                     aria-controls="panel1a-content"
-                                    id="panel1a-header"
                                     sx={{
                                         padding: "0 2rem",
                                         borderTop: "2rem"
                                     }}
                                 >
-                                    <Typography>{i+1}. {affair.substring(0, 15)}...</Typography>
+                                    <Typography 
+                                        sx={{
+                                            "@media screen and (max-width: 750px)": {
+                                                fontSize: 20
+                                            }
+                                        }}
+                                    >
+                                        {i+1}. {affair.substring(0, 15)}...
+                                    </Typography>
                                 </AccordionSummary>
                                 <AccordionDetails 
                                     sx={{ 
@@ -93,7 +109,13 @@ export default function Affairs() {
                                         BorderBottom: "2rem"
                                     }}
                                 >
-                                    <Typography>
+                                    <Typography
+                                        sx={{
+                                            "@media screen and (max-width: 750px)": {
+                                                fontSize: 20
+                                            }
+                                        }}
+                                    >
                                         {affair}
                                     </Typography>
                                 </AccordionDetails>

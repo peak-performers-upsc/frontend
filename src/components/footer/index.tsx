@@ -97,7 +97,7 @@ export default function Footer() {
                             src={bannerImage}
                             alt="Peak Performers"
                             className={styles.logo}
-                            width={"50%"}
+                            height={"30rem"}
                         />
                     </div>
                     <div className={styles.media}>
@@ -108,7 +108,10 @@ export default function Footer() {
                                     sx={{
                                         color: "#cccccc", 
                                         fontSize: socialMediaFontSize*.7,
-                                        border: "#cccccc"
+                                        border: "#cccccc",
+                                        "@media screen and (max-width: 750px)": {
+                                            fontSize: 15
+                                        }
                                     }}
                                     avatar={link.component}
                                     variant="outlined"
@@ -122,7 +125,10 @@ export default function Footer() {
                         variant="h2" 
                         sx={{
                             color: palette.primaryColor, 
-                            fontSize: 36
+                            fontSize: 36,
+                            "@media screen and (max-width: 750px)": {
+                                fontSize: 30
+                            }
                         }}
                         className={styles.title}
                     >
@@ -136,7 +142,10 @@ export default function Footer() {
                                     sx={{
                                         color: "#cccccc", 
                                         fontSize: socialMediaFontSize*.7,
-                                        border: "#cccccc"
+                                        border: "#cccccc",
+                                        "@media screen and (max-width: 750px)": {
+                                            fontSize: 15
+                                        }
                                     }}
                                     avatar={link.component}
                                     variant="outlined"
@@ -150,7 +159,10 @@ export default function Footer() {
                         variant="h2" 
                         sx={{
                             color: palette.primaryColor, 
-                            fontSize: 36
+                            fontSize: 36,
+                            "@media screen and (max-width: 750px)": {
+                                fontSize: 30
+                            }
                         }}
                         className={styles.title}
                     >
@@ -164,7 +176,10 @@ export default function Footer() {
                                     sx={{
                                         color: "#cccccc", 
                                         fontSize: socialMediaFontSize*.7,
-                                        border: "#cccccc"
+                                        border: "#cccccc",
+                                        "@media screen and (max-width: 750px)": {
+                                            fontSize: 15
+                                        }
                                     }}
                                     avatar={link.component}
                                     variant="outlined"

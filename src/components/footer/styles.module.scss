@@ -3,16 +3,17 @@
 .footer_container {
     border-top: 1px solid rgba(245,216,0,0.4);
     min-height: 15vh;
+    width: 100vw;
     background-color: black;
     display: flex;
     justify-content: center;
+    align-items: center;
 
     &>.main {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-evenly;
-        gap: 10%;
-        width: 75%;
+        gap: 4rem;
         padding: 3rem 0;
         
         &>.socials {
@@ -25,8 +26,14 @@
 
             &>.media {
                 display: flex;
-                gap: 4rem;
+                flex: 0 1 auto;
+                flex-wrap: wrap;
+                gap: 2rem;
                 justify-content: space-evenly;
+            }
+
+            &>.logo {
+                width: 40%;
             }
         }
 
@@ -35,10 +42,13 @@
             flex-direction: column;
             align-items: center;
             gap: 2rem;
-            min-width: 25%;
             &>.content {
                 display: flex;
-                justify-content: space-evenly;
+                flex: 0 1 auto;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
                 width: 100%;
 
                 & div:hover {
@@ -49,6 +59,19 @@
                 width: 100%;
                 text-align: center;
                 // padding-top: 1rem;
+            }
+        }
+    }
+
+
+    @media screen and (max-width: 750px) {
+        &>.main {
+
+            &>.socials {
+
+                &>.logo {
+                    width: 100%;
+                }
             }
         }
     }

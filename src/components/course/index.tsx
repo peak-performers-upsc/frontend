@@ -14,15 +14,41 @@ import { Circle as CircleIcon } from '@mui/icons-material';
 
 const Typography = styled(MuiTypography)`
     color: #cccccc;
+
+    @media screen and (max-width: 1150px) {
+        font-size: 30px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        font-size: 25px;
+    }
+
+    @media screen and (max-width: 475px) {
+        font-size: 25px;
+    }
 `
 
 const Chip = styled(MuiChip)`
     background-color: ${alpha(palette.primaryColor, 0.85)};
-    font-size: large;
-
+    font-size: 18px;
+    font-weight: 500;
+    
     .MuiChip-custom {
+        font-weight: 500;
         background-color: #262626;
         color: #cccccc;
+    }
+
+    @media screen and (max-width: 1150px) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        font-size: 14px;
+    }
+
+    @media screen and (max-width: 475px) {
+        font-size: 12px;
     }
 `
 
@@ -38,7 +64,6 @@ interface BatchProps {
 }
 
 export default function Batch({ batch, negative }: BatchProps) {
-    // const prof = (typeof batch.prof === "string"?([batch.prof]):batch.prof)
     return (
         <div 
             style={{ 
@@ -58,10 +83,33 @@ export default function Batch({ batch, negative }: BatchProps) {
                     alignItems: "center",
                     flexDirection: `row-reverse`,
                     gap: "4rem",
-                    color: !negative?palette.primaryColor:"#1d1d1dfb"
+                    color: !negative?palette.primaryColor:"#1d1d1dfb",
+                    "@media screen and (max-width: 1350px)": {
+                        width: "90%",
+                        padding: "0 7rem"
+                    },
+                    "@media screen and (max-width: 1000px)": {
+                        gap: "4rem"
+                    },
+                    "@media screen and (max-width: 750px)": {
+                        gap: "2rem",
+                        padding: "0 4rem"
+                    },
+                    "@media screen and (max-width: 550px)": {
+                        gap: "2rem"
+                    },
                 }}
             >
-                <Box width="75%" minHeight="80%">
+                <Box
+                    sx={{
+                        minHeight:"80%",
+                        width: "75%",
+                        "@media screen and (max-width: 850px)": {
+                            width: "100%",
+                            minHeight: "60%"
+                        },
+                    }}
+                >
                     <CardContent
                         sx={{
                             display: "flex",
@@ -80,34 +128,23 @@ export default function Batch({ batch, negative }: BatchProps) {
                             >
                                 {batch.title}
                             </Typography>
-                            {/* <div style={{ display: "flex"}}>
-                                <Typography 
-                                    variant="h2" 
-                                    fontSize={25}
-                                >
-                                    Prof.{" "}
-                                    {prof.map((e, i) => (
-                                        <span 
-                                            style={{ 
-                                                color: !negative?palette.primaryColor:"#fff"
-                                            }} 
-                                            key={i}
-                                        >
-                                            {e}
-                                            {i<prof.length-1 && (
-                                                <span style={{ color: "#1d1d1d"}}>{", "}</span>
-                                            )}
-                                        </span>
-                                    ))}
-                                </Typography>
-                            </div> */}
                             {batch.subtitle && (
                                 <Typography 
                                     variant="h3" 
                                     sx={{ 
                                         color: `${negative?"#1d1d1dfb":"#cccccc"} !important`,
                                         fontSize: 22,
-                                        fontWeight: 500
+                                        fontWeight: 500,
+                                        "@media screen and (max-width: 1150px)": {
+                                            fontSize: "20px !important"
+                                        },
+                                        "@media screen and (max-width: 1000px)": {
+                                            fontSize: "18px !important"
+                                        },
+                                        "@media screen and (max-width: 475px)": {
+                                            fontSize: "16px !important"
+                                        },
+                                        opacity: .9
                                     }}
                                 >
                                     {batch.subtitle}
@@ -117,7 +154,9 @@ export default function Batch({ batch, negative }: BatchProps) {
                         <div 
                             style={{
                                 display: "flex",
-                                gap: 8
+                                gap: 8,
+                                flexWrap: "wrap",
+                                flex: "0 1 auto"
                             }}
                         >
                             <Chip 
@@ -153,16 +192,33 @@ export default function Batch({ batch, negative }: BatchProps) {
                             }}
                         >
                             {batch.details.map((detail, i) => (
-                                <div style={{ display: "flex", alignItems: "center", gap: ".8rem" }}>
-                                    <Circle sx={{
-                                        ...(negative && { color: "#262626 !important"}),
-                                    }}/>
+                                <div 
+                                    style={{ 
+                                        display: "flex", 
+                                        alignItems: "center", 
+                                        gap: ".8rem" 
+                                    }}
+                                >
+                                    <Circle 
+                                        sx={{
+                                            ...(negative && { color: "#262626 !important"}),
+                                        }}
+                                    />
                                     <Typography 
                                         variant="h4" 
                                         key={i}
                                         sx={{
                                             ...(negative && { color: "#262626 !important"}),
-                                            fontWeight: 430
+                                            fontWeight: 430,
+                                            "@media screen and (max-width: 1150px)": {
+                                                fontSize: "20px !important"
+                                            },
+                                            "@media screen and (max-width: 1000px)": {
+                                                fontSize: "18px !important"
+                                            },
+                                            "@media screen and (max-width: 475px)": {
+                                                fontSize: "16px !important"
+                                            },
                                         }}
                                     >
                                         {detail}
@@ -172,12 +228,25 @@ export default function Batch({ batch, negative }: BatchProps) {
                         </div>
                     </CardContent>
                 </Box>
-                <Box width="25%">
+                <Box 
+                    width="25%"
+                    sx={{
+                        "@media screen and (max-width: 850px)": {
+                            display: "none"
+                        }
+                    }}  
+                >
                     <CardMedia 
                         component="img"
                         image={batch.image}
                         alt={batch.title}
-                        width={"20%"}
+                        sx={{
+                            // width: "20%",
+                            paddingTop: "2rem",
+                            "@media screen and (max-width: 1350px)": {
+                                width: "100% !important"
+                            }
+                        }}
                     />
                 </Box>
             </Card>
