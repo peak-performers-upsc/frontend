@@ -1,14 +1,13 @@
-import styles from "./styles.module.scss";
-import logo from "./../../assets/banner2.png";
-import { useState, useEffect, ReactNode } from "react";
+import CloseIcon from '@mui/icons-material/Close';
+import MenuIcon from '@mui/icons-material/Menu';
 import {
   Accordion,
-  AccordionSummary,
   AccordionDetails,
-  Typography
+  AccordionSummary
 } from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
+import { useState } from "react";
+import logo from "./../../assets/banner2.png";
+import styles from "./styles.module.scss";
 
 
 export default function Header() {
