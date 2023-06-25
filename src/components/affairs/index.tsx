@@ -9,17 +9,31 @@ import {
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import palette from "../../theme/palette";
 import styled from "@emotion/styled";
+import axios from "axios";
+import useSwr from "swr";
 
 const Typography = styled(MuiTypography)`
     font-size: 25px;
 `
 
+interface ResponseType  {
+    Content: string
+}
+
+const URL = "http://localhost:8000/api/all/";
+
+const getResponse = async (url: string) => (
+    await axios.get(url)
+    .then(res => res.data as ResponseType[])
+    .then(res => res.map(e => e.Content))
+    .catch(err => err.response.data)
+)
+
+
+
 export default function Affairs() {
-    const affairs = [
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore rerum blanditiis modi eius saepe praesentium placeat quae veritatis, quis fugit exercitationem nisi. Praesentium nobis illo quas quisquam repellendus rem, est nesciunt alias quis aliquid. Ipsum qui, sed reiciendis deserunt ad dicta omnis repellat numquam tempore odit exercitationem mollitia eius ratione.",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore rerum blanditiis modi eius saepe praesentium placeat quae veritatis, quis fugit exercitationem nisi. Praesentium nobis illo quas quisquam repellendus rem, est nesciunt alias quis aliquid. Ipsum qui, sed reiciendis deserunt ad dicta omnis repellat numquam tempore odit exercitationem mollitia eius ratione.",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore rerum blanditiis modi eius saepe praesentium placeat quae veritatis, quis fugit exercitationem nisi. Praesentium nobis illo quas quisquam repellendus rem, est nesciunt alias quis aliquid. Ipsum qui, sed reiciendis deserunt ad dicta omnis repellat numquam tempore odit exercitationem mollitia eius ratione.",
-    ]
+    const { data: affairs } = useSwr<string[]>(URL, getResponse)
+
     return (
         <div className={styles.wrapper} id="affairs">
             <div className={styles.affairs_container}>
@@ -43,7 +57,7 @@ export default function Affairs() {
                     </div>
                 </div>
                 <div className={styles.main}>
-                    {affairs.map((affair, i) => (
+                    {affairs?.map((affair, i) => (
                         <div
                             style={{ 
                                 width: "100%",
