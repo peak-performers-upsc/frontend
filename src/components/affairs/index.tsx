@@ -20,7 +20,7 @@ interface ResponseType  {
     Content: string
 }
 
-const URL = "http://localhost:8000/api/all/";
+const URL = "http://13.233.132.25/api/all/";
 
 const getResponse = async (url: string) => (
     await axios.get(url)
