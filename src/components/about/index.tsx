@@ -22,22 +22,22 @@ interface IAbout {
 const aboutTiles: IAbout[] = [
     {
         title: "Experienced Faculty and Holistic Learning Approach",
-        content: "Peak Performers IAS Academy excels in IAS coaching, with experienced faculty and high-quality education. Their holistic approach and innovative techniques ensure quick comprehension of concepts.",
+        content: "Peak Performers UPSC Academy excels in UPSC coaching, with experienced faculty and high-quality education. Their holistic approach and innovative techniques ensure quick comprehension of concepts.",
         image: learningImage
     },
     {
         title: "Flexible Courses and Comprehensive Materials",
-        content: "With flexible online and offline courses, Peak Performers Coaching meets the needs of every student. Well-structured materials, exclusive learning modules, and practice tests enhance exam preparation.",
+        content: "With flexible online and offline courses, Peak Performers Coaching meets the needs of every aspirant. Well-structured materials, exclusive learning modules, and practice tests enhance exam preparation.",
         image: flexibleImage
     },
     {
         title: "Personalized Guidance and Tailored Modules",
-        content: "Peak Performers IAS Institute provides comprehensive study materials and personalized guidance. Tailored modules and mentorship from experienced faculty help students build a strong foundation",
+        content: "Peak Performers UPSC Institute provides comprehensive study materials and personalized guidance. Tailored modules and mentorship from experienced faculty help aspirants build a strong foundation",
         image: personalisationImage
     },
     {
-        title: "Unbeatable IAS Preparation Experience",
-        content: "Peak Performers IAS Institute offers an unbeatable UPSC preparation experience, with a proven track record of success. Students can trust in top-notch support, resources, and expertise for their journey.",
+        title: "Unbeatable UPSC Preparation Experience",
+        content: "Peak Performers UPSC Institute offers an unbeatable UPSC preparation experience, with a proven track record of success. aspirants can trust in top-notch support, resources, and expertise for their journey.",
         image: preparationImage
     }
 ]

@@ -55,7 +55,7 @@ export default function Affairs() {
                                 }
                             }}
                         >
-                            Current Affairs
+                            Current Affairs Updates
                         </Typography>
                     </div>
                 </div>
