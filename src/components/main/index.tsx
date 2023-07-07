@@ -1,5 +1,4 @@
 import styles from "./styles.module.scss";
-import emblemYellowImage from "./../../assets/emblem-primary.png";
 
 export default function Header() {
   return (
