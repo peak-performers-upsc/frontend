@@ -74,7 +74,7 @@ const batches: IBatch[] = [
         details: [
             "P1 and P2 coverage",
             "Limited Material",
-            "Ritzer, Haralombus and Subberwal being the primary texts",
+            "Ritzer, Haralombos and Subberwal being the primary texts",
             "2 rounds of 2 tests"
         ]
     }

@@ -22,17 +22,17 @@ interface IAbout {
 const aboutTiles: IAbout[] = [
     {
         title: "Experienced Faculty and Holistic Learning Approach",
-        content: "Peak Performers UPSC Academy excels in UPSC coaching, with experienced faculty and high-quality education. Their holistic approach and innovative techniques ensure quick comprehension of concepts.",
+        content: "Peak Performers UPSC Tutorails excels in UPSC coaching, with experienced faculty and high-quality education. Their holistic approach and innovative techniques ensure quick comprehension of concepts.",
         image: learningImage
     },
     {
         title: "Flexible Courses and Comprehensive Materials",
-        content: "With flexible online and offline courses, Peak Performers Coaching meets the needs of every aspirant. Well-structured materials, exclusive learning modules, and practice tests enhance exam preparation.",
+        content: "With flexible online and offline courses, Peak Performers UPSC Tutorials meets the needs of every aspirant. Well-structured materials, exclusive learning modules, and practice tests enhance exam preparation.",
         image: flexibleImage
     },
     {
         title: "Personalized Guidance and Tailored Modules",
-        content: "Peak Performers UPSC Institute provides comprehensive study materials and personalized guidance. Tailored modules and mentorship from experienced faculty help aspirants build a strong foundation",
+        content: "Peak Performers UPSC Tutorials provides comprehensive study materials and personalized guidance. Tailored modules and mentorship from experienced faculty help aspirants build a strong foundation",
         image: personalisationImage
     },
     {
