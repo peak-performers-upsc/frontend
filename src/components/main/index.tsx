@@ -13,9 +13,9 @@ export default function Header() {
           Peak Performers UPSC Tutorials' main motto is providing personalized UPSC CSE solutions tailored to the aspirant's strategic intellectual needs. Spearheaded by the duo of Bhupender K Bhardwaj (AIR 590/2013) and Pooja Mishra (3xMain/400 plus in GS/151 in Essay); join them to fulfill the Great Indian Dream of becoming a Civil Servant!
           </p>
         </div>
-        <div className={styles.hero_img}>
+        {/* <div className={styles.hero_img}>
           <img src={emblemYellowImage} />
-        </div>
+        </div> */}
       </div>
     </>
   );
