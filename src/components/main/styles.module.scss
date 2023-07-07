@@ -9,14 +9,6 @@
     background-image: radial-gradient(circle at 100% 100%, #434343 10rem, #131313 30rem, #000000 40rem);
     min-height: calc(100vh - 10rem);
 
-    &>.hero_img {
-        height: 100%;
-        &>img {
-            height: 600px;
-            object-fit: cover;
-        }
-    }
-
     &>.hero_text{
         text-align: left;
         height: 100%;
@@ -24,9 +16,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: left;
         .p1{
             font-size: 50px;
             color: #d6d6d6;
+            display: flex;
+            width: 100%;
         }
     
         .p2{
